@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-danger py-3">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Pokegram</h5>
+                </div>
+                <div class="d-flex align-right justify-content-end">
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create a new Pokepost
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Caption:</h6>
+                    <textarea class="form-control" placeholder="Add the caption of your post here"
+                        id="floatingTextarea2"></textarea>
+                    <div class="row p-2">
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-2">
+        <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true"><i
+                        class="fa-solid fa-table-cells"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/138618b2-fbf3-4cf7-b7cc-05c632407a51/di62hpc-53cfd393-c072-4f65-9e8b-72ebf863c600.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEzODYxOGIyLWZiZjMtNGNmNy1iN2NjLTA1YzYzMjQwN2E1MVwvZGk2MmhwYy01M2NmZDM5My1jMDcyLTRmNjUtOWU4Yi03MmViZjg2M2M2MDAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uXq_FMCFQPrF6qY178ndcddm8rAAlb4FRJ4omAQKkH8" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://avatarfiles.alphacoders.com/374/thumb-1920-374586.png" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://image.tensorartassets.com/model_showcase/630179566402649161/28519caf-1e3c-11d8-72ec-bc6c27ef94bc.jpeg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://cdnb.artstation.com/p/assets/images/images/024/009/773/large/viviana-ramirez-cyndaquil-min.jpg?1581019483" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0eb0f155-e353-4cbc-882d-ea2e9025c5b5/ddpquze-b5fde401-6114-4449-a367-2afbe9e44e3d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBlYjBmMTU1LWUzNTMtNGNiYy04ODJkLWVhMmU5MDI1YzViNVwvZGRwcXV6ZS1iNWZkZTQwMS02MTE0LTQ0NDktYTM2Ny0yYWZiZTllNDRlM2QuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UK1oWJ2GLAK3RckFzCEMnUHqavpOsdCext5VmqrIKlY" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.ytimg.com/vi/EUbxVcVFzik/maxresdefault.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.etsystatic.com/26653540/r/il/e6b8b2/2738865894/il_fullxfull.2738865894_bmg7.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://pbs.twimg.com/media/FjoC6YlXEAEqhZK.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2021/08/giratina-pokemon-fan-art.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+            </div>
+            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Snorlax</div>
+                            <small class="align-bottom">N.º0143</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/138618b2-fbf3-4cf7-b7cc-05c632407a51/di62hpc-53cfd393-c072-4f65-9e8b-72ebf863c600.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEzODYxOGIyLWZiZjMtNGNmNy1iN2NjLTA1YzYzMjQwN2E1MVwvZGk2MmhwYy01M2NmZDM5My1jMDcyLTRmNjUtOWU4Yi03MmViZjg2M2M2MDAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uXq_FMCFQPrF6qY178ndcddm8rAAlb4FRJ4omAQKkH8" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>354 Likes</strong>
+                            <p>Este Pokémon es un glotón que lo único que hace aparte de comer es dormir. Puede ingerir hasta 400 kg de comida en un solo día.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Squirtle</div>
+                            <small>N.º0007</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://avatarfiles.alphacoders.com/374/thumb-1920-374586.png" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>261 Likes</strong>
+                            <p>Tras nacer, se le hincha el lomo y se le forma un caparazón. Escupe poderosa espuma por la boca.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Gengar</div>
+                            <small>N.º0094</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://image.tensorartassets.com/model_showcase/630179566402649161/28519caf-1e3c-11d8-72ec-bc6c27ef94bc.jpeg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>666 Likes</strong>
+                            <p>De noche, se oculta en las sombras y absorbe el calor de sus víctimas, que sufren escalofríos irrefrenables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Cyndaquil</div>
+                            <small>N.º0155</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://cdnb.artstation.com/p/assets/images/images/024/009/773/large/viviana-ramirez-cyndaquil-min.jpg?1581019483" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>198 Likes</strong>
+                            <p>Cuando se enfada, las llamas que emite por el lomo arden con más vigor que nunca, lo cual intimida a sus rivales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Kyogre</div>
+                            <small>N.º0382</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0eb0f155-e353-4cbc-882d-ea2e9025c5b5/ddpquze-b5fde401-6114-4449-a367-2afbe9e44e3d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBlYjBmMTU1LWUzNTMtNGNiYy04ODJkLWVhMmU5MDI1YzViNVwvZGRwcXV6ZS1iNWZkZTQwMS02MTE0LTQ0NDktYTM2Ny0yYWZiZTllNDRlM2QuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UK1oWJ2GLAK3RckFzCEMnUHqavpOsdCext5VmqrIKlY" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>520 Likes</strong>
+                            <p>Kyogre se sirve de la energía de la naturaleza para realizar su Regresión Primigenia y recobrar su apariencia primitiva. Con tal poder, puede desencadenar tempestades para expandir los océanos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Dedenne</div>
+                            <small>N.º0702</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://i.ytimg.com/vi/EUbxVcVFzik/maxresdefault.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>46 Likes</strong>
+                            <p>Se comunica con los suyos a través de las ondas eléctricas que emite con los bigotes. Si su reserva de electricidad disminuye, se acurruca y duerme.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Wooper</div>
+                            <small>N.º0194</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://i.etsystatic.com/26653540/r/il/e6b8b2/2738865894/il_fullxfull.2738865894_bmg7.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>651 Likes</strong>
+                            <p>Está cubierto por una membrana mucosa transparente. El contacto directo provoca escozor y entumecimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Fuecoco</div>
+                            <small>N.º0909</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://pbs.twimg.com/media/FjoC6YlXEAEqhZK.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>3851 Likes</strong>
+                            <p>Yace sobre rocas calientes, cuyo calor transforma en energía ígnea tras absorberlo por sus escamas rectangulares.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Giratina</div>
+                            <small>N.º0487</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2021/08/giratina-pokemon-fan-art.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>6666 Likes</strong>
+                            <p>Vive en el Mundo Distorsión, un mundo opuesto al nuestro y cuyas leyes desafían el sentido común.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+</html>
